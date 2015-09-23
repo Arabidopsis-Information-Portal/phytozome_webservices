@@ -7,7 +7,7 @@ type: passthrough
 url: http://phytozome.jgi.doe.gov/jbrowse/vista_rest
 whitelist:
   - phytozome.jgi.doe.gov
-icon: logo.jpg
+icon: logo.png
 
 authors:
     - name: Vivek Krishnakumar
