@@ -1,7 +1,0 @@
-name: lbl_vista_rest
-version: 0.1
-description: LBLs VISTA Plot JBrowse REST Endpoint
-type: passthrough
-url: http://phytozome.jgi.doe.gov/jbrowse/vista_rest
-whitelist:
-  - phytozome.jgi.doe.gov

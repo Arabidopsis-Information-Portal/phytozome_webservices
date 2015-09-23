@@ -1,0 +1,30 @@
+---
+
+name: phytomine
+version: 0.1
+description: Passthrough adapter for Phytozome's InterMine (PhytoMine) web services
+type: passthrough
+url: http://phytozome.jgi.doe.gov/phytomine/service
+whitelist:
+  - phytozome.jgi.doe.gov
+icon: logo-JGI-Phytozome.png
+tags:
+    - 'intermine'
+    - 'phytozome'
+    - 'comparative genomics'
+
+authors:
+    - name: Vivek Krishnakumar
+      email: vkrishna@jcvi.org
+      sponsor_organization: J. Craig Venter Institute
+      sponsor_uri: https://www.jcvi.org
+
+sources:
+    - title: PhytoMine
+      description: An InterMine interface to data from Phytozome
+      sponsor_organization_name: Joint Genome Institute
+      sponsor_uri: http://jgi.doe.gov
+      provider_name: Dr. David M. Goodstein
+      provider_email: dmgoodstein@lbl.gov
+      uri: http://phytozome.jgi.doe.gov/phytomine/
+      license: GNU Lesser General Public License

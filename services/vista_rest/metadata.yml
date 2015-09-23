@@ -1,0 +1,25 @@
+---
+
+name: vista_rest
+version: 0.1
+description: Passthrough adapter for JBrowse REST endpoint serving VISTA alignments
+type: passthrough
+url: http://phytozome.jgi.doe.gov/jbrowse/vista_rest
+whitelist:
+  - phytozome.jgi.doe.gov
+icon: logo.jpg
+
+authors:
+    - name: Vivek Krishnakumar
+      email: vkrishna@jcvi.org
+      sponsor_organization: J. Craig Venter Institute
+      sponsor_uri: https://www.jcvi.org
+
+sources:
+    - title: VISTA
+      description: VISTA alignments for genomes sequenced in DOE JGI
+      sponsor_organization_name: Joint Genome Institute
+      sponsor_uri: http://jgi.doe.gov
+      provider_name: Dr. David M. Goodstein
+      provider_email: dmgoodstein@lbl.gov
+      uri: http://genome.lbl.gov/vista/index.shtml
