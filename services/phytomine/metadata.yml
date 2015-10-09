@@ -7,13 +7,13 @@ type: passthrough
 url: http://phytozome.jgi.doe.gov/phytomine
 whitelist:
   - phytozome.jgi.doe.gov:
-    deny:
-      - Authorization
-    forward:
-      - Accept-Encoding
-      - Referer
-      - Origin
-      - accept
+      deny:
+        - Authorization
+      forward:
+        - Accept-Encoding
+        - Referer
+        - Origin
+        - accept
 icon: logo-JGI-Phytozome.png
 tags:
     - 'intermine'
