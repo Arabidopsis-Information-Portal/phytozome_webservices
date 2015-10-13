@@ -1,13 +1,24 @@
 ---
 
 name: vista_rest
-version: 0.1
+version: 0.2
 description: Passthrough adapter for JBrowse REST endpoint serving VISTA alignments
 type: passthrough
 url: http://phytozome.jgi.doe.gov/jbrowse/vista_rest
 whitelist:
-  - phytozome.jgi.doe.gov
+  - phytozome.jgi.doe.gov:
+      deny:
+        - Authorization
+      forward:
+        - Accept-Encoding
+        - Referer
+        - Origin
+        - accept
 icon: logo.png
+tags:
+    - 'vista'
+    - 'phytozome'
+    - 'comparative genomics'
 
 authors:
     - name: Vivek Krishnakumar
