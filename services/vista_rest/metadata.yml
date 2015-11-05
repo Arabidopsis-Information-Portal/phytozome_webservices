@@ -1,7 +1,7 @@
 ---
 
 name: vista_rest
-version: 0.2
+version: 0.3
 description: Passthrough adapter for JBrowse REST endpoint serving VISTA alignments
 type: passthrough
 url: http://phytozome.jgi.doe.gov/jbrowse/vista_rest
@@ -19,6 +19,60 @@ tags:
     - 'vista'
     - 'phytozome'
     - 'comparative genomics'
+
+endpoints:
+    /access/stats/global:
+        get:
+            summary: Return global stats
+            description: Returns a JSON object containing global statistics about the features served by this store
+    /access/features/{chr}:
+        get:
+            summary: Return region features
+            description: Fetch feature data (including quantitative data) for the specified region in JSON format
+            parameters:
+                - name: chr
+                  in: path
+                  description: Chromsome
+                  type: string
+                  required: true
+                  pattern: '^Chr[1-5CM]$'
+                  default: 'Chr1'
+                - name: vista_base_id
+                  type: integer
+                  format: int64
+                  required: true
+                  default: 611
+                - name: target_id
+                  type: integer
+                  format: int64
+                  required: true
+                  default: 962
+                - name: target_run
+                  type: integer
+                  format: int64
+                  required: true
+                  default: 660
+                - name: start
+                  description: Start
+                  type: integer
+                  format: int64
+                  required: true
+                  default: 216843
+                - name: end
+                  description: End
+                  type: integer
+                  format: int64
+                  required: true
+                  default: 225822
+                  minimum: 1
+                - name: scale
+                  description: Scale
+                  type: number
+                  format: double
+                - name: basesPerSpan
+                  description: Bases Per Span
+                  type: number
+                  format: double
 
 authors:
     - name: Vivek Krishnakumar
