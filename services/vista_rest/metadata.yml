@@ -1,8 +1,8 @@
 ---
 
 name: vista_rest
-version: 0.3
-description: Passthrough adapter for JBrowse REST endpoint serving VISTA alignments
+version: 0.2
+description: Passthrough adapter for Phytozome JBrowse REST endpoint serving VISTA alignments
 type: passthrough
 url: http://phytozome.jgi.doe.gov/jbrowse/vista_rest
 whitelist:
@@ -19,6 +19,7 @@ tags:
     - 'vista'
     - 'phytozome'
     - 'comparative genomics'
+    - 'jbrowse'
 
 endpoints:
     /access/stats/global:
@@ -37,33 +38,18 @@ endpoints:
                   required: true
                   pattern: '^Chr[1-5CM]$'
                   default: 'Chr1'
-                - name: vista_base_id
-                  type: integer
-                  format: int64
-                  required: true
-                  default: 611
-                - name: target_id
-                  type: integer
-                  format: int64
-                  required: true
-                  default: 962
-                - name: target_run
-                  type: integer
-                  format: int64
-                  required: true
-                  default: 660
                 - name: start
                   description: Start
                   type: integer
                   format: int64
                   required: true
-                  default: 216843
+                  default: 23058437
                 - name: end
                   description: End
                   type: integer
                   format: int64
                   required: true
-                  default: 225822
+                  default: 23059296
                   minimum: 1
                 - name: scale
                   description: Scale
@@ -73,6 +59,24 @@ endpoints:
                   description: Bases Per Span
                   type: number
                   format: double
+                - name: vista_base_id
+                  description: Reference organism ID
+                  type: integer
+                  format: int64
+                  required: true
+                  default: 611
+                - name: target_id
+                  description: Target ID
+                  type: integer
+                  format: int64
+                  required: true
+                  default: 962
+                - name: target_run
+                  description: Target organism ID
+                  type: integer
+                  format: int64
+                  required: true
+                  default: 660
 
 authors:
     - name: Vivek Krishnakumar
