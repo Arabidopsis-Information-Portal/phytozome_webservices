@@ -4,9 +4,17 @@ name: phytomine
 version: 0.2
 description: Passthrough adapter for Phytozome's InterMine (PhytoMine) web services
 type: passthrough
-url: https://phytozome.jgi.doe.gov/phytomine
+url: http://adama-prod-aws.mattdotvaughn.org/proxy/phytozome/phytomine
 whitelist:
   - phytozome.jgi.doe.gov:
+      deny:
+        - Authorization
+      forward:
+        - Accept-Encoding
+        - Referer
+        - Origin
+        - accept
+  - adama-prod-aws.mattdotvaughn.org:
       deny:
         - Authorization
       forward:
